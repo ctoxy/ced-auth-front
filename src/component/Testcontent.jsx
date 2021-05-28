@@ -19,8 +19,8 @@ export default class TestContent extends Component {
                 address: { city: "New Jersy" }
             },
             { id: 3, name: "Allen", phone: "889-921", address: { city: "London" } },
-            { id: 4, name: "James", phone: "552-901", address: { city: "Berlin" } },
-            { id: 5, name: "John", phone: "781-778", address: { city: "New York" } }
+            { id: 4, name: "James", phone: null, address: { city: "Berlin" } },
+            { id: 5, name: "John", phone: null, address: { city: "New York" } }
         ]
     };
     //execute when a user click on 
@@ -60,7 +60,13 @@ export default class TestContent extends Component {
                                     <tr key={cust.id}>
                                         <td>{cust.id}</td>
                                         <td>{cust.name}</td>
-                                        <td>{cust.phone}</td>
+                                        <td>
+                                            {cust.phone ? (
+                                                cust.phone
+                                            ) : (
+                                                <div className="bg-warning p-2 text-center">No Phone</div>
+                                            )}
+                                        </td>
                                         <td>{cust.address.city}</td>
                                     </tr>
                                 );
