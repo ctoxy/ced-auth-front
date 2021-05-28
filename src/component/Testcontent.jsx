@@ -3,24 +3,44 @@ import Layout from '../core/Layout';
 
 export default class TestContent extends Component {
     state = {
-        pageTitle: 'Customers',
+        pageTitle: "Customers",
         customersCount: 5,
         customers: [
             {
                 id: 1,
-                name: 'Scott',
-                phone: '123-456',
-                address: { city: 'New Delhi' }
+                name: "Scott",
+                phone: "123-456",
+                address: { city: "New Delhi" },
+                photo: "https://picsum.photos/id/1010/60"
             },
             {
                 id: 2,
-                name: 'Jones',
-                phone: '982-014',
-                address: { city: 'New Jersy' }
+                name: "Jones",
+                phone: "982-014",
+                address: { city: "New Jersy" },
+                photo: "https://picsum.photos/id/1011/60"
             },
-            { id: 3, name: 'Allen', phone: '889-921', address: { city: 'London' } },
-            { id: 4, name: 'James', phone: null, address: { city: 'Berlin' } },
-            { id: 5, name: 'John', phone: null, address: { city: 'New York' } }
+            {
+                id: 3,
+                name: "Allen",
+                phone: "889-921",
+                address: { city: "London" },
+                photo: "https://picsum.photos/id/1012/60"
+            },
+            {
+                id: 4,
+                name: "James",
+                phone: null,
+                address: { city: "Berlin" },
+                photo: "https://picsum.photos/id/1013/60"
+            },
+            {
+                id: 5,
+                name: "John",
+                phone: null,
+                address: { city: "New York" },
+                photo: "https://picsum.photos/id/1014/60"
+            }
         ]
     };
     /*execute when a user click on */
@@ -42,6 +62,9 @@ export default class TestContent extends Component {
             return (
                 <tr key={cust.id}>
                     <td>{cust.id}</td>
+                    <td>
+                        <img src={cust.photo} alt="Customer" />
+                    </td>
                     <td>{cust.name}</td>
                     <td>{this.getPhoneToRender(cust.phone)}</td>
                     <td>{cust.address.city}</td>
