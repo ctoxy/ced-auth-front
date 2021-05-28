@@ -45,17 +45,17 @@ const Signup = () => {
     const signupForm = () => (
         <form>
             <div className="form-group">
-                <lable className="text-muted">Name</lable>
+                <label className="text-muted">Name</label>
                 <input onChange={handleChange('name')} value={name} type="text" className="form-control" />
             </div>
 
             <div className="form-group">
-                <lable className="text-muted">Email</lable>
+                <label className="text-muted">Email</label>
                 <input onChange={handleChange('email')} value={email} type="email" className="form-control" />
             </div>
 
             <div className="form-group">
-                <lable className="text-muted">Password</lable>
+                <label className="text-muted">Password</label>
                 <input onChange={handleChange('password')} value={password} type="password" className="form-control" />
             </div>
 
