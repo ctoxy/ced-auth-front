@@ -39,13 +39,13 @@ const Forgot = ({ history }) => {
 
     const passwordForgotForm = () => (
         <form>
-            <div class="form-group">
-                <label class="text-muted">Email</label>
-                <input onChange={handleChange('email')} value={email} type="email" class="form-control" />
+            <div className="form-group">
+                <label className="text-muted">Email</label>
+                <input onChange={handleChange('email')} value={email} type="email" className="form-control" />
             </div>
 
             <div>
-                <button class="btn btn-primary" onClick={clickSubmit}>
+                <button className="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -54,9 +54,9 @@ const Forgot = ({ history }) => {
 
     return (
         <Layout>
-            <div class="col-md-6 offset-md-3">
+            <div className="col-md-6 offset-md-3">
                 <ToastContainer />
-                <h1 class="p-5 text-center">Forgot password</h1>
+                <h1 className="p-5 text-center">Forgot password</h1>
                 {passwordForgotForm()}
             </div>
         </Layout>

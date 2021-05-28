@@ -79,27 +79,27 @@ const Admin = ({ history }) => {
 
     const updateForm = () => (
         <form>
-            <div class="form-group">
-                <label class="text-muted">Role</label>
-                <input defaultValue={role} type="text" class="form-control" disabled />
+            <div className="form-group">
+                <label className="text-muted">Role</label>
+                <input defaultValue={role} type="text" className="form-control" disabled />
             </div>
-            <div class="form-group">
-                <label class="text-muted">Name</label>
-                <input onChange={handleChange('name')} value={name} type="text" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label class="text-muted">Email</label>
-                <input defaultValue={email} type="email" class="form-control" disabled />
+            <div className="form-group">
+                <label className="text-muted">Name</label>
+                <input onChange={handleChange('name')} value={name} type="text" className="form-control" />
             </div>
 
-            <div class="form-group">
-                <label class="text-muted">Password</label>
-                <input onChange={handleChange('password')} value={password} type="password" class="form-control" />
+            <div className="form-group">
+                <label className="text-muted">Email</label>
+                <input defaultValue={email} type="email" className="form-control" disabled />
+            </div>
+
+            <div className="form-group">
+                <label className="text-muted">Password</label>
+                <input onChange={handleChange('password')} value={password} type="password" className="form-control" />
             </div>
 
             <div>
-                <button class="btn btn-primary" onClick={clickSubmit}>
+                <button className="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -108,10 +108,10 @@ const Admin = ({ history }) => {
 
     return (
         <Layout>
-            <div class="col-md-6 offset-md-3">
+            <div className="col-md-6 offset-md-3">
                 <ToastContainer />
-                <h1 class="pt-5 text-center">Admin</h1>
-                <p class="lead text-center">Profile update</p>
+                <h1 className="pt-5 text-center">Admin</h1>
+                <p className="lead text-center">Profile update</p>
                 {updateForm()}
             </div>
         </Layout>

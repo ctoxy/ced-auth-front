@@ -44,23 +44,23 @@ const Signup = () => {
 
     const signupForm = () => (
         <form>
-            <div class="form-group">
-                <lable class="text-muted">Name</lable>
-                <input onChange={handleChange('name')} value={name} type="text" class="form-control" />
+            <div className="form-group">
+                <lable className="text-muted">Name</lable>
+                <input onChange={handleChange('name')} value={name} type="text" className="form-control" />
             </div>
 
-            <div class="form-group">
-                <lable class="text-muted">Email</lable>
-                <input onChange={handleChange('email')} value={email} type="email" class="form-control" />
+            <div className="form-group">
+                <lable className="text-muted">Email</lable>
+                <input onChange={handleChange('email')} value={email} type="email" className="form-control" />
             </div>
 
-            <div class="form-group">
-                <lable class="text-muted">Password</lable>
-                <input onChange={handleChange('password')} value={password} type="password" class="form-control" />
+            <div className="form-group">
+                <lable className="text-muted">Password</lable>
+                <input onChange={handleChange('password')} value={password} type="password" className="form-control" />
             </div>
 
             <div>
-                <button class="btn btn-primary" onClick={clickSubmit}>
+                <button className="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -69,14 +69,14 @@ const Signup = () => {
 
     return (
         <Layout>
-            <div class="col-md-6 offset-md-3">
+            <div className="col-md-6 offset-md-3">
                 <ToastContainer />
-                <h1 class="p-5 text-center">Signup</h1>
+                <h1 className="p-5 text-center">Signup</h1>
                 {signupForm()}
 
                 <br />
 
-                <Link to="/auth/password/forgot" class="btn btn-sm btn-outline-danger">
+                <Link to="/auth/password/forgot" className="btn btn-sm btn-outline-danger">
                     Forgot Password
                 </Link>
 

@@ -21,14 +21,14 @@ const Facebook = ({ informParent = f => f }) => {
             });
     };
     return (
-        <div class="pb-3">
+        <div className="pb-3">
             <FacebookLogin
                 appId={`${process.env.REACT_APP_FACEBOOK_APP_ID}`}
                 autoLoad={false}
                 callback={responseFacebook}
                 render={renderProps => (
-                    <button onClick={renderProps.onClick} class="btn btn-primary btn-lg btn-block">
-                        <i class="fab fa-facebook pr-2" /> Login with Facebook
+                    <button onClick={renderProps.onClick} className="btn btn-primary btn-lg btn-block">
+                        <i className="fab fa-facebook pr-2" /> Login with Facebook
                     </button>
                 )}
             />

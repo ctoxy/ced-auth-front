@@ -13,26 +13,26 @@ const Layout = ({ children, match, history }) => {
 
   const nav = () => (
 
-    <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
-      <div class="container-fluid">
-        <Link class="navbar-brand" to="/" >Navbar</Link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" />
+    <nav className="navbar navbar-expand-lg navbar-light navbar-dark bg-primary">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/" >Navbar</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/" style={isActive('/')}>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/" style={isActive('/')}>
                 Home
                   </Link>
             </li>
             {!isAuth() && (
               <Fragment>
-                <li class="nav-item">
-                  <Link class="nav-link" to="/signup" style={isActive('/signup')}>SignUp</Link>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup" style={isActive('/signup')}>SignUp</Link>
                 </li>
-                <li class="nav-item">
-                  <Link class="nav-link" to="/signin" style={isActive('/signin')}>Signin</Link>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signin" style={isActive('/signin')}>Signin</Link>
                 </li>
 
               </Fragment>
@@ -40,25 +40,25 @@ const Layout = ({ children, match, history }) => {
             )}
 
             {isAuth() && isAuth().role === 'admin' && (
-              <li class="nav-item">
-                <Link class="nav-link" style={isActive('/admin')} to="/admin">
+              <li className="nav-item">
+                <Link className="nav-link" style={isActive('/admin')} to="/admin">
                   {isAuth().name}
                 </Link>
               </li>
             )}
 
             {isAuth() && isAuth().role === 'subscriber' && (
-              <li class="nav-item">
-                <Link class="nav-link" style={isActive('/private')} to="/private">
+              <li className="nav-item">
+                <Link className="nav-link" style={isActive('/private')} to="/private">
                   {isAuth().name}
                 </Link>
               </li>
             )}
 
             {isAuth() && (
-              <li class="nav-item">
+              <li className="nav-item">
                 <span
-                  class="nav-link"
+                  className="nav-link"
                   // eslint-disable-next-line react-native/no-inline-styles
                   style={{ cursor: 'pointer', color: '#fff' }}
                   onClick={() => {
@@ -82,7 +82,7 @@ const Layout = ({ children, match, history }) => {
   return (
     <Fragment>
       {nav()}
-      <div class="container p-5 text-center">{children}</div>
+      <div className="container p-5 text-center">{children}</div>
     </Fragment>
   );
 };

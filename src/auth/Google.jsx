@@ -21,7 +21,7 @@ const Google = ({ informParent = f => f }) => {
             });
     };
     return (
-        <div class="pb-3">
+        <div className="pb-3">
             <GoogleLogin
                 clientId={`${process.env.REACT_APP_GOOGLE_CLIENT_ID}`}
                 onSuccess={responseGoogle}
@@ -30,9 +30,9 @@ const Google = ({ informParent = f => f }) => {
                     <button
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        class="btn btn-danger btn-lg btn-block"
+                        className="btn btn-danger btn-lg btn-block"
                     >
-                        <i class="fab fa-google pr-2" /> Login with Google
+                        <i className="fab fa-google pr-2" /> Login with Google
                     </button>
                 )}
                 cookiePolicy={'single_host_origin'}
