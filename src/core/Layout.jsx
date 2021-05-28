@@ -31,6 +31,11 @@ const Layout = ({ children, match, history }) => {
                 CustomerList
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/ShoppingCart" style={isActive('/ShoppingCart')}>
+                ShoppingCart
+              </Link>
+            </li>
             {!isAuth() && (
               <Fragment>
                 <li className="nav-item">

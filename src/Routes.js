@@ -13,13 +13,14 @@ import AdminRoute from './auth/AdminRoute';
 import Forgot from './auth/Forgot';
 import Reset from './auth/Reset';
 import CustomerList from './component/CustomerList';
-
+import ShoppingCart from './component/ShoppingCard/ShoppingCart';
 const Routes = () => {
     return (
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={App} />
                 <Route path="/customers" exact component={CustomerList} />
+                <Route path="/ShoppingCart" exact component={ShoppingCart} />
                 <Route path="/signup" exact component={Signup} />
                 <Route path="/signin" exact component={Signin} />
                 <Route path="/auth/activate/:token" exact component={Activate} />
