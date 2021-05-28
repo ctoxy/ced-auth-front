@@ -15,6 +15,7 @@ const App = () => {
         <Layout>
             {head()}
             <MainContent />
+
         </Layout>
     );
 };
