@@ -69,16 +69,16 @@ const Signup = () => {
     return (
         <Layout>
             <div className="col-md-6 offset-md-3">
-                <ToastContainer />              
+                <ToastContainer />
                 <h1 className="p-5 text-center">Signup</h1>
                 {signupForm()}
 
-                <br/>
-                
+                <br />
+
                 <Link to="/auth/password/forgot" className="btn btn-sm btn-outline-danger">
                     Forgot Password
                 </Link>
-                
+
             </div>
         </Layout>
     );

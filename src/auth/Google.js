@@ -31,7 +31,7 @@ const Google = ({ informParent = f => f }) => {
                         disabled={renderProps.disabled}
                         className="btn btn-danger btn-lg btn-block"
                     >
-                        <i className="fab fa-google pr-2"></i> Login with Google
+                        <i className="fab fa-google pr-2" /> Login with Google
                     </button>
                 )}
                 cookiePolicy={'single_host_origin'}

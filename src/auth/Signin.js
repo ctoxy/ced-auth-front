@@ -30,7 +30,7 @@ const Signin = ({ history }) => {
             isAuth() && isAuth().role === 'admin' ? history.push('/admin') : history.push('/private');
         });
     };
-    
+
     const clickSubmit = event => {
         event.preventDefault();
         setValues({ ...values, buttonText: 'Submitting' });
@@ -77,14 +77,14 @@ const Signin = ({ history }) => {
 
     return (
         <Layout>
-            
+
             <div className="col-md-6 offset-md-3">
                 <ToastContainer />
-                {isAuth() ? <Redirect to="/" /> : null }
+                {isAuth() ? <Redirect to="/" /> : null}
                 <h1 className="p-5 text-center">Signin</h1>
                 <Google informParent={informParent} />
                 <Facebook informParent={informParent} />
-                
+
                 {signinForm()}
 
                 <br />

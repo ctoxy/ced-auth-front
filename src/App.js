@@ -7,7 +7,7 @@ const App = () => {
         <Helmet>
             <meta charSet="utf-8" />
             <title>MERN Stack</title>
-            <link rel="canonical" href="https://mern-stack.com" />
+            <link rel="canonical" href="/" />
         </Helmet>
     );
     return (
