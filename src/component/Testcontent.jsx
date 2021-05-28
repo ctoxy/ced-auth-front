@@ -3,21 +3,70 @@ import Layout from '../core/Layout';
 
 export default class TestContent extends Component {
     state = {
-        pageTitle: "TestContent sand box",
-        customersCount: 5
-    }
-
-    onRefreshClick() {
-        console.log('Refresh Click');
+        pageTitle: "Customers",
+        customersCount: 5,
+        customers: [
+            {
+                id: 1,
+                name: "Scott",
+                phone: "123-456",
+                address: { city: "New Delhi" }
+            },
+            {
+                id: 2,
+                name: "Jones",
+                phone: "982-014",
+                address: { city: "New Jersy" }
+            },
+            { id: 3, name: "Allen", phone: "889-921", address: { city: "London" } },
+            { id: 4, name: "James", phone: "552-901", address: { city: "Berlin" } },
+            { id: 5, name: "John", phone: "781-778", address: { city: "New York" } }
+        ]
+    };
+    //execute when a user click on 
+    onRefreshClick = () => {
+        this.setState({
+            customersCount: 7
+        })
     }
     render() {
         return (
             <Layout>
-                <div className="text-center">
-                    <h1 className="p-5">{this.state.pageTitle}
-                        <span className="badge bg-secondary m-2">{this.state.customersCount}</span>
-                        <button className="btn btn-info" onClick={this.onRefreshClick}>Refresh</button>
-                    </h1>
+                <div>
+                    <h4 className="border-bottom m-1 p-1">
+                        {this.state.pageTitle}
+
+                        <span className="badge badge-secondary m-2">
+                            {this.state.customersCount}
+                        </span>
+
+                        <button className="btn btn-info" onClick={this.onRefreshClick}>
+                            Refresh
+              </button>
+                    </h4>
+
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Customer Name</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.customers.map((cust) => {
+                                return (
+                                    <tr key={cust.id}>
+                                        <td>{cust.id}</td>
+                                        <td>{cust.name}</td>
+                                        <td>{cust.phone}</td>
+                                        <td>{cust.address.city}</td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
                 </div>
             </Layout>
         );
