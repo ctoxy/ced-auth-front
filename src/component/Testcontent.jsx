@@ -3,51 +3,51 @@ import Layout from '../core/Layout';
 
 export default class TestContent extends Component {
     state = {
-        pageTitle: "Customers",
+        pageTitle: 'Customers',
         customersCount: 5,
         customers: [
             {
                 id: 1,
-                name: "Scott",
-                phone: "123-456",
-                address: { city: "New Delhi" },
-                photo: "https://picsum.photos/id/1010/60"
+                name: 'Scott',
+                phone: '123-456',
+                address: { city: 'New Delhi' },
+                photo: 'https://picsum.photos/id/1010/60'
             },
             {
                 id: 2,
-                name: "Jones",
-                phone: "982-014",
-                address: { city: "New Jersy" },
-                photo: "https://picsum.photos/id/1011/60"
+                name: 'Jones',
+                phone: '982-014',
+                address: { city: 'New Jersy' },
+                photo: 'https://picsum.photos/id/1011/60'
             },
             {
                 id: 3,
-                name: "Allen",
-                phone: "889-921",
-                address: { city: "London" },
-                photo: "https://picsum.photos/id/1012/60"
+                name: 'Allen',
+                phone: '889-921',
+                address: { city: 'London' },
+                photo: 'https://picsum.photos/id/1012/60'
             },
             {
                 id: 4,
-                name: "James",
+                name: 'James',
                 phone: null,
-                address: { city: "Berlin" },
-                photo: "https://picsum.photos/id/1013/60"
+                address: { city: 'Berlin' },
+                photo: 'https://picsum.photos/id/1013/60'
             },
             {
                 id: 5,
-                name: "John",
+                name: 'John',
                 phone: null,
-                address: { city: "New York" },
-                photo: "https://picsum.photos/id/1014/60"
+                address: { city: 'New York' },
+                photo: 'https://picsum.photos/id/1014/60'
             }
         ]
     };
 
     customerNameStyle = (custName) => {
-        if (custName.startsWith("S")) return { backgroundColor: "green" };
-        else if (custName.startsWith("J")) return { backgroundColor: "red" };
-        else return {};
+        if (custName.startsWith('S')) { return { backgroundColor: 'green' }; }
+        else if (custName.startsWith('J')) { return { backgroundColor: 'red' }; }
+        else { return {}; }
     };
 
     /*execute when a user click on */
@@ -58,7 +58,7 @@ export default class TestContent extends Component {
     };
 
     getPhoneToRender = (phone) => {
-        if (phone) return phone;
+        if (phone) { return phone; }
         else {
             return <div className="bg-warning p-2 text-center">No Phone</div>;
         }
