@@ -5,6 +5,7 @@ import 'jquery';
 import 'popper.js/dist/umd/popper';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
 const rootElement = document.getElementById('root');
 if (rootElement.hasChildNodes()) {
