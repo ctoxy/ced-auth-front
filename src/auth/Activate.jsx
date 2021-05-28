@@ -42,9 +42,9 @@ const Activate = ({ match }) => {
     };
 
     const activationLink = () => (
-        <div className="text-center">
-            <h1 className="p-5">Hey {name}, Ready to activate your account?</h1>
-            <button className="btn btn-outline-primary" onClick={clickSubmit}>
+        <div class="text-center">
+            <h1 class="p-5">Hey {name}, Ready to activate your account?</h1>
+            <button class="btn btn-outline-primary" onClick={clickSubmit}>
                 Activate Account
             </button>
         </div>
@@ -52,7 +52,7 @@ const Activate = ({ match }) => {
 
     return (
         <Layout>
-            <div className="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3">
                 <ToastContainer />
                 {activationLink()}
             </div>

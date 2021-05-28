@@ -57,18 +57,18 @@ const Signin = ({ history }) => {
 
     const signinForm = () => (
         <form>
-            <div className="form-group">
-                <label className="text-muted">Email</label>
-                <input onChange={handleChange('email')} value={email} type="email" className="form-control" />
+            <div class="form-group">
+                <label class="text-muted">Email</label>
+                <input onChange={handleChange('email')} value={email} type="email" class="form-control" />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">Password</label>
-                <input onChange={handleChange('password')} value={password} type="password" className="form-control" />
+            <div class="form-group">
+                <label class="text-muted">Password</label>
+                <input onChange={handleChange('password')} value={password} type="password" class="form-control" />
             </div>
 
             <div>
-                <button className="btn btn-primary" onClick={clickSubmit}>
+                <button class="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -78,10 +78,10 @@ const Signin = ({ history }) => {
     return (
         <Layout>
 
-            <div className="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3">
                 <ToastContainer />
                 {isAuth() ? <Redirect to="/" /> : null}
-                <h1 className="p-5 text-center">Signin</h1>
+                <h1 class="p-5 text-center">Signin</h1>
                 <Google informParent={informParent} />
                 <Facebook informParent={informParent} />
 
@@ -89,7 +89,7 @@ const Signin = ({ history }) => {
 
                 <br />
 
-                <Link to="/auth/password/forgot" className="btn btn-sm btn-outline-danger">
+                <Link to="/auth/password/forgot" class="btn btn-sm btn-outline-danger">
                     Forgot Password
                 </Link>
             </div>

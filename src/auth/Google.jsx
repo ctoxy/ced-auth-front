@@ -10,6 +10,7 @@ const Google = ({ informParent = f => f }) => {
             url: `${process.env.REACT_APP_API}/google-login`,
             data: { idToken: response.tokenId }
         })
+            // eslint-disable-next-line no-shadow
             .then(response => {
                 console.log('GOOGLE SIGNIN SUCCESS', response);
                 // inform parent component
@@ -20,7 +21,7 @@ const Google = ({ informParent = f => f }) => {
             });
     };
     return (
-        <div className="pb-3">
+        <div class="pb-3">
             <GoogleLogin
                 clientId={`${process.env.REACT_APP_GOOGLE_CLIENT_ID}`}
                 onSuccess={responseGoogle}
@@ -29,9 +30,9 @@ const Google = ({ informParent = f => f }) => {
                     <button
                         onClick={renderProps.onClick}
                         disabled={renderProps.disabled}
-                        className="btn btn-danger btn-lg btn-block"
+                        class="btn btn-danger btn-lg btn-block"
                     >
-                        <i className="fab fa-google pr-2" /> Login with Google
+                        <i class="fab fa-google pr-2" /> Login with Google
                     </button>
                 )}
                 cookiePolicy={'single_host_origin'}

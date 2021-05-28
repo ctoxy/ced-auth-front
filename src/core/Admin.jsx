@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Layout from '../core/Layout';
+import Layout from './Layout';
 import axios from 'axios';
 import { isAuth, getCookie, signout, updateUser } from '../auth/helpers';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-const Private = ({ history }) => {
+const Admin = ({ history }) => {
     const [values, setValues] = useState({
         role: '',
         name: '',
@@ -46,6 +46,7 @@ const Private = ({ history }) => {
 
     const { role, name, email, password, buttonText } = values;
 
+    // eslint-disable-next-line no-shadow
     const handleChange = name => event => {
         // console.log(event.target.value);
         setValues({ ...values, [name]: event.target.value });
@@ -56,7 +57,7 @@ const Private = ({ history }) => {
         setValues({ ...values, buttonText: 'Submitting' });
         axios({
             method: 'PUT',
-            url: `${process.env.REACT_APP_API}/user/update`,
+            url: `${process.env.REACT_APP_API}/admin/update`,
             headers: {
                 Authorization: `Bearer ${token}`
             },
@@ -78,27 +79,27 @@ const Private = ({ history }) => {
 
     const updateForm = () => (
         <form>
-            <div className="form-group">
-                <label className="text-muted">Role</label>
-                <input defaultValue={role} type="text" className="form-control" disabled />
+            <div class="form-group">
+                <label class="text-muted">Role</label>
+                <input defaultValue={role} type="text" class="form-control" disabled />
             </div>
-            <div className="form-group">
-                <label className="text-muted">Name</label>
-                <input onChange={handleChange('name')} value={name} type="text" className="form-control" />
-            </div>
-
-            <div className="form-group">
-                <label className="text-muted">Email</label>
-                <input defaultValue={email} type="email" className="form-control" disabled />
+            <div class="form-group">
+                <label class="text-muted">Name</label>
+                <input onChange={handleChange('name')} value={name} type="text" class="form-control" />
             </div>
 
-            <div className="form-group">
-                <label className="text-muted">Password</label>
-                <input onChange={handleChange('password')} value={password} type="password" className="form-control" />
+            <div class="form-group">
+                <label class="text-muted">Email</label>
+                <input defaultValue={email} type="email" class="form-control" disabled />
+            </div>
+
+            <div class="form-group">
+                <label class="text-muted">Password</label>
+                <input onChange={handleChange('password')} value={password} type="password" class="form-control" />
             </div>
 
             <div>
-                <button className="btn btn-primary" onClick={clickSubmit}>
+                <button class="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -107,14 +108,14 @@ const Private = ({ history }) => {
 
     return (
         <Layout>
-            <div className="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3">
                 <ToastContainer />
-                <h1 className="pt-5 text-center">Private</h1>
-                <p className="lead text-center">Profile update</p>
+                <h1 class="pt-5 text-center">Admin</h1>
+                <p class="lead text-center">Profile update</p>
                 {updateForm()}
             </div>
         </Layout>
     );
 };
 
-export default Private;
+export default Admin;

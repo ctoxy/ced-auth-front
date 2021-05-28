@@ -40,25 +40,26 @@ const Layout = ({ children, match, history }) => {
             )}
 
             {isAuth() && isAuth().role === 'admin' && (
-              <li className="nav-item">
-                <Link className="nav-link" style={isActive('/admin')} to="/admin">
+              <li class="nav-item">
+                <Link class="nav-link" style={isActive('/admin')} to="/admin">
                   {isAuth().name}
                 </Link>
               </li>
             )}
 
             {isAuth() && isAuth().role === 'subscriber' && (
-              <li className="nav-item">
-                <Link className="nav-link" style={isActive('/private')} to="/private">
+              <li class="nav-item">
+                <Link class="nav-link" style={isActive('/private')} to="/private">
                   {isAuth().name}
                 </Link>
               </li>
             )}
 
             {isAuth() && (
-              <li className="nav-item">
+              <li class="nav-item">
                 <span
-                  className="nav-link"
+                  class="nav-link"
+                  // eslint-disable-next-line react-native/no-inline-styles
                   style={{ cursor: 'pointer', color: '#fff' }}
                   onClick={() => {
                     signout(() => {
@@ -81,7 +82,7 @@ const Layout = ({ children, match, history }) => {
   return (
     <Fragment>
       {nav()}
-      <div className="container p-5 text-center">{children}</div>
+      <div class="container p-5 text-center">{children}</div>
     </Fragment>
   );
 };

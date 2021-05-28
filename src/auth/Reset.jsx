@@ -51,20 +51,20 @@ const Reset = ({ match }) => {
 
     const passwordResetForm = () => (
         <form>
-            <div className="form-group">
-                <label className="text-muted">Email</label>
+            <div class="form-group">
+                <label class="text-muted">Email</label>
                 <input
                     onChange={handleChange}
                     value={newPassword}
                     type="password"
-                    className="form-control"
+                    class="form-control"
                     placeholder="Type new password"
                     required
                 />
             </div>
 
             <div>
-                <button className="btn btn-primary" onClick={clickSubmit}>
+                <button class="btn btn-primary" onClick={clickSubmit}>
                     {buttonText}
                 </button>
             </div>
@@ -73,9 +73,9 @@ const Reset = ({ match }) => {
 
     return (
         <Layout>
-            <div className="col-md-6 offset-md-3">
+            <div class="col-md-6 offset-md-3">
                 <ToastContainer />
-                <h1 className="p-5 text-center">Hey {name}, Type your new password</h1>
+                <h1 class="p-5 text-center">Hey {name}, Type your new password</h1>
                 {passwordResetForm()}
             </div>
         </Layout>
