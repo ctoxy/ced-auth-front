@@ -43,6 +43,13 @@ export default class TestContent extends Component {
             }
         ]
     };
+
+    customerNameStyle = (custName) => {
+        if (custName.startsWith("S")) return { backgroundColor: "green" };
+        else if (custName.startsWith("J")) return { backgroundColor: "red" };
+        else return {};
+    };
+
     /*execute when a user click on */
     onRefreshClick = () => {
         this.setState({
@@ -65,7 +72,7 @@ export default class TestContent extends Component {
                     <td>
                         <img src={cust.photo} alt="Customer" />
                     </td>
-                    <td>{cust.name}</td>
+                    <td style={this.customerNameStyle(cust.name)}>{cust.name}</td>
                     <td>{this.getPhoneToRender(cust.phone)}</td>
                     <td>{cust.address.city}</td>
                 </tr>
@@ -79,18 +86,20 @@ export default class TestContent extends Component {
                     <h4 className="m-1 p-1">
                         {this.state.pageTitle}
 
-                        <span className="badge badge-secondary m-2">
+                        <span className="badge bg-secondary m-2">
                             {this.state.customersCount}
                         </span>
 
                         <button className="btn btn-info" onClick={this.onRefreshClick}>
                             Refresh
-                        </button>
+              </button>
                     </h4>
+
                     <table className="table">
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Photo</th>
                                 <th>Customer Name</th>
                                 <th>Phone</th>
                                 <th>City</th>
