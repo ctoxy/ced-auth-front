@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Layout from '../core/Layout';
 
-export default class TestContent extends Component {
+export default class CustomerList extends Component {
     state = {
         pageTitle: 'Customers',
         customersCount: 5,

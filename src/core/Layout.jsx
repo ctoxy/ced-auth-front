@@ -27,8 +27,8 @@ const Layout = ({ children, match, history }) => {
                   </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/test" style={isActive('/test')}>
-                Test
+              <Link className="nav-link active" aria-current="page" to="/customers" style={isActive('/customers')}>
+                CustomerList
               </Link>
             </li>
             {!isAuth() && (
