@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class MainContent extends Component {
-    state = { appTitle: "React Node MongoDB Authentication Boilerplat2" }
+    state = { appTitle: 'React Node MongoDB Authentication Boilerplat2' }
     render() {
         return (
             <div className="col-md-6 offset-md-3 text-center">
