@@ -15,6 +15,7 @@ export default class MainContent extends Component {
                 </p>
                 <h4 className="p2">Bonus</h4>
                 <p className="lead">Profile update & deployment to digital ocean cloud servers</p>
+
             </div>
         );
     }

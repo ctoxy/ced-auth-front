@@ -38,6 +38,13 @@
                 "exports": "never",
                 "functions": "never"
             }
+        ],
+        "react/self-closing-comp": [
+            "error",
+            {
+                "component": true,
+                "html": true
+            }
         ]
     }
 }

@@ -91,7 +91,7 @@ export default class CustomerList extends Component {
 
         //get existing customers
         var custArr = this.state.customers;
-        custArr[index].photo = "https://picsum.photos/id/104/60";
+        custArr[index].photo = 'https://picsum.photos/id/104/60';
 
         //update "customers" array in the state
         this.setState({ customers: custArr });

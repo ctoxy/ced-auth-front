@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class Product extends Component {
     state = {
@@ -21,7 +21,7 @@ export default class Product extends Component {
                                     this.props.onDelete(this.state.product);
                                 }}
                             >
-                                <i className="fa fa-times"></i>
+                                <i className="fa fa-times" />
                             </span>
                             {/* delete button ends */}
                         </div>
@@ -36,7 +36,7 @@ export default class Product extends Component {
 
                     <div className="card-footer">
                         <div className="float-left">
-                            <span className="badge">{this.state.product.quantity}</span>
+                            <span className="badge bg-success">{this.state.product.quantity}</span>
 
                             <div className="btn-group">
                                 <button
@@ -66,5 +66,9 @@ export default class Product extends Component {
                 </div>
             </div>
         );
+    }
+    //Executes when the current instance of current component is being deleted from memory
+    componentWillUnmount() {
+        console.log("componentWillUnmount - Product");
     }
 }
